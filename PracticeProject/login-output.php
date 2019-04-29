@@ -14,7 +14,7 @@ foreach ($sql->fetchAll() as $row) {
     // 以foreach將user的資料存到以'customer'為索引的SESSION陣列
 }
 if (isset($_SESSION['customer'])) {
-	echo '親愛的', $_SESSION['customer']['name'], '、歡迎光臨。';
+	echo '親愛的'. $_SESSION['customer']['name'].'，歡迎光臨。';
 } else {
 	echo '登入ID或密碼有誤。';
   // 如果上面ID/PW在database有值的話就會存到SESSION 這樣就判斷是會員
